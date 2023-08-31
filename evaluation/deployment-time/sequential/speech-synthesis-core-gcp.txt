@@ -1,0 +1,23 @@
+Function:  speech-synthesis-core
+Provider: GCP
+Region:  us-east1
+Upload 1: 20 seconds
+Deployment 1: 85 seconds
+Upload 2: 19 seconds
+Deployment 2: 65 seconds
+Upload 3: 17 seconds
+Deployment 3: 80 seconds
+Upload 4: 19 seconds
+Deployment 4: 73 seconds
+Upload 5: 17 seconds
+Deployment 5: 80 seconds
+Upload 6: 25 seconds
+Deployment 6: 79 seconds
+Upload 7: 21 seconds
+Deployment 7: 71 seconds
+Upload 8: 22 seconds
+Deployment 8: 59 seconds
+Upload 9: 20 seconds
+Deployment 9: 77 seconds
+Upload 10: 19 seconds
+Deployment 10: 68 seconds

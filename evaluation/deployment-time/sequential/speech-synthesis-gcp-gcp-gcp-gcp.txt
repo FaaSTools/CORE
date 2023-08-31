@@ -1,0 +1,23 @@
+Function:  speech-synthesis-google
+Provider: GCP
+Region:  us-east1
+Upload 1: 19 seconds
+Deployment 1: 70 seconds
+Upload 2: 21 seconds
+Deployment 2: 68 seconds
+Upload 3: 19 seconds
+Deployment 3: 69 seconds
+Upload 4: 19 seconds
+Deployment 4: 64 seconds
+Upload 5: 17 seconds
+Deployment 5: 54 seconds
+Upload 6: 15 seconds
+Deployment 6: 59 seconds
+Upload 7: 14 seconds
+Deployment 7: 69 seconds
+Upload 8: 17 seconds
+Deployment 8: 82 seconds
+Upload 9: 18 seconds
+Deployment 9: 63 seconds
+Upload 10: 18 seconds
+Deployment 10: 71 seconds

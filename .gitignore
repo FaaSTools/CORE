@@ -1,0 +1,27 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+/**/log/
+/**/target/
+
+# Terraform
+/**/.terraform.lock.hcl
+/**/.terraform.tfstate.lock.info
+/**/.terraform/
+/**/terraform.tfstate
+/**/terraform.tfstate.backup
+/**/variables.tf
+
+# Jupyter 
+/**/.ipynb_checkpoints/
+
+# Other
+/**/credentials.json
+/**/credentials.properties
+

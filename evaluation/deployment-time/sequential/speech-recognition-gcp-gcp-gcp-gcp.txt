@@ -1,0 +1,27 @@
+Function: speech-recognition
+FaaS: GCP
+Storage SDK: GCP
+Recognition SDK: GCP
+Region:  us-east1
+
+
+Upload 1: 17 seconds
+Deployment 1: 77 seconds
+Upload 2: 19 seconds
+Deployment 2: 69 seconds
+Upload 3: 21 seconds
+Deployment 3: 67 seconds
+Upload 4: 20 seconds
+Deployment 4: 67 seconds
+Upload 5: 19 seconds
+Deployment 5: 70 seconds
+Upload 6: 18 seconds
+Deployment 6: 72 seconds
+Upload 7: 18 seconds
+Deployment 7: 67 seconds
+Upload 8: 19 seconds
+Deployment 8: 77 seconds
+Upload 9: 23 seconds
+Deployment 9: 76 seconds
+Upload 10: 17 seconds
+Deployment 10: 56 seconds

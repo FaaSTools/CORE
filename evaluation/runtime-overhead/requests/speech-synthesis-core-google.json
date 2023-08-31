@@ -1,0 +1,4 @@
+{
+  "inputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/synthesis.txt",
+  "outputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/synthesis-output-core.pcm"
+}

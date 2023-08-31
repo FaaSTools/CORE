@@ -1,0 +1,52 @@
+[
+  {
+    "executionTime": 10868,
+    "recognitionTime": 10648,
+    "roundTripTime": 11402
+  },
+  {
+    "executionTime": 12171,
+    "recognitionTime": 12013,
+    "roundTripTime": 12671
+  },
+  {
+    "executionTime": 12404,
+    "recognitionTime": 12225,
+    "roundTripTime": 12893
+  },
+  {
+    "executionTime": 12220,
+    "recognitionTime": 12009,
+    "roundTripTime": 12784
+  },
+  {
+    "executionTime": 11948,
+    "recognitionTime": 11754,
+    "roundTripTime": 12425
+  },
+  {
+    "executionTime": 11824,
+    "recognitionTime": 11722,
+    "roundTripTime": 12395
+  },
+  {
+    "executionTime": 11608,
+    "recognitionTime": 11506,
+    "roundTripTime": 12181
+  },
+  {
+    "executionTime": 12149,
+    "recognitionTime": 12007,
+    "roundTripTime": 13724
+  },
+  {
+    "executionTime": 10981,
+    "recognitionTime": 10873,
+    "roundTripTime": 11491
+  },
+  {
+    "executionTime": 11657,
+    "recognitionTime": 11523,
+    "roundTripTime": 12359
+  }
+]

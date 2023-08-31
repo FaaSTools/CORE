@@ -1,0 +1,4 @@
+{
+  "inputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/recognition.wav",
+  "outputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/recognition-output-core.json"
+}

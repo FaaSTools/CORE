@@ -1,0 +1,6 @@
+{
+  "inputBucket": "tommi-test-bucket",
+  "inputFile": "synthesis.txt",
+  "outputBucket": "tommi-test-bucket",
+  "outputFile": "synthesis-output-amazon.pcm"
+}

@@ -1,0 +1,6 @@
+{
+  "inputBucket": "tommi-test-bucket",
+  "inputFile": "downup.txt",
+  "outputBucket": "tommi-test-bucket",
+  "outputFile": "downup-output-google.txt"
+}

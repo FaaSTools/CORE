@@ -1,0 +1,4 @@
+{
+  "inputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/downup.txt",
+  "outputFileUrl": "https://storage.cloud.google.com/tommi-test-bucket/downup-output-core.txt"
+}

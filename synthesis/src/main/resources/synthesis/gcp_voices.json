@@ -1,0 +1,2319 @@
+[
+  {
+    "name": "ro-RO-Wavenet-A",
+    "language": "ro-RO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Standard-A",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "de-DE-Standard-B",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "de-DE-Standard-C",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "de-DE-Standard-D",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "de-DE-Standard-E",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "de-DE-Standard-F",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-ES-Standard-C",
+    "language": "es-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-ES-Standard-D",
+    "language": "es-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-ES-Standard-B",
+    "language": "es-ES",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "eu-ES-Standard-A",
+    "language": "eu-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-FR-Standard-A",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-FR-Standard-B",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-FR-Standard-C",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-FR-Standard-D",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "gl-ES-Standard-A",
+    "language": "gl-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "id-ID-Standard-A",
+    "language": "id-ID",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "id-ID-Standard-B",
+    "language": "id-ID",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "id-ID-Standard-C",
+    "language": "id-ID",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "id-ID-Standard-D",
+    "language": "id-ID",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "it-IT-Standard-B",
+    "language": "it-IT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "it-IT-Standard-C",
+    "language": "it-IT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "it-IT-Standard-D",
+    "language": "it-IT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "it-IT-Standard-A",
+    "language": "it-IT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "mr-IN-Standard-A",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "mr-IN-Standard-B",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "mr-IN-Standard-C",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pa-IN-Standard-A",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pa-IN-Standard-B",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pa-IN-Standard-C",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pa-IN-Standard-D",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-BR-Standard-A",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-BR-Standard-B",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-BR-Standard-C",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sv-SE-Standard-B",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sv-SE-Standard-C",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sv-SE-Standard-D",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sv-SE-Standard-E",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sv-SE-Standard-A",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ta-IN-Standard-C",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ta-IN-Standard-D",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "yue-HK-Standard-A",
+    "language": "yue-HK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "yue-HK-Standard-B",
+    "language": "yue-HK",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "yue-HK-Standard-C",
+    "language": "yue-HK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "yue-HK-Standard-D",
+    "language": "yue-HK",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "bn-IN-Standard-A",
+    "language": "bn-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "bn-IN-Standard-B",
+    "language": "bn-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-CN-Standard-C",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-CN-Standard-B",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-CN-Standard-A",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-CN-Standard-D",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-TW-Standard-A",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-TW-Standard-B",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cmn-TW-Standard-C",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-A",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-B",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-C",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-D",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-E",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-F",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-G",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-H",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-I",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-US-Standard-J",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-US-Standard-A",
+    "language": "es-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-US-Standard-B",
+    "language": "es-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-US-Standard-C",
+    "language": "es-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "gu-IN-Standard-A",
+    "language": "gu-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "gu-IN-Standard-B",
+    "language": "gu-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ja-JP-Standard-A",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ja-JP-Standard-B",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ja-JP-Standard-C",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ja-JP-Standard-D",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "kn-IN-Standard-A",
+    "language": "kn-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "kn-IN-Standard-B",
+    "language": "kn-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ml-IN-Standard-A",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ml-IN-Standard-B",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-BE-Standard-A",
+    "language": "nl-BE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-BE-Standard-B",
+    "language": "nl-BE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ta-IN-Standard-A",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ta-IN-Standard-B",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "te-IN-Standard-A",
+    "language": "te-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "te-IN-Standard-B",
+    "language": "te-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ar-XA-Standard-A",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ar-XA-Standard-B",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ar-XA-Standard-C",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ar-XA-Standard-D",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "bg-BG-Standard-A",
+    "language": "bg-BG",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ca-ES-Standard-A",
+    "language": "ca-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "cs-CZ-Standard-A",
+    "language": "cs-CZ",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "da-DK-Standard-C",
+    "language": "da-DK",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "da-DK-Standard-D",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "da-DK-Standard-E",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "da-DK-Standard-A",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "el-GR-Standard-A",
+    "language": "el-GR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-AU-Standard-A",
+    "language": "en-AU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-AU-Standard-B",
+    "language": "en-AU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-AU-Standard-C",
+    "language": "en-AU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-AU-Standard-D",
+    "language": "en-AU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-GB-Standard-A",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-GB-Standard-B",
+    "language": "en-GB",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-GB-Standard-C",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-GB-Standard-D",
+    "language": "en-GB",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-GB-Standard-F",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-IN-Standard-D",
+    "language": "en-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-IN-Standard-A",
+    "language": "en-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-IN-Standard-B",
+    "language": "en-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "en-IN-Standard-C",
+    "language": "en-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "es-ES-Standard-A",
+    "language": "es-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fi-FI-Standard-A",
+    "language": "fi-FI",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fil-PH-Standard-A",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fil-PH-Standard-B",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fil-PH-Standard-C",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fil-PH-Standard-D",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-CA-Standard-A",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-CA-Standard-B",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-CA-Standard-C",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-CA-Standard-D",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "fr-FR-Standard-E",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "he-IL-Standard-D",
+    "language": "he-IL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "he-IL-Standard-A",
+    "language": "he-IL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "he-IL-Standard-B",
+    "language": "he-IL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "he-IL-Standard-C",
+    "language": "he-IL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "hi-IN-Standard-D",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "hi-IN-Standard-A",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "hi-IN-Standard-B",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "hi-IN-Standard-C",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "hu-HU-Standard-A",
+    "language": "hu-HU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "is-IS-Standard-A",
+    "language": "is-IS",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ko-KR-Standard-A",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ko-KR-Standard-B",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ko-KR-Standard-C",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ko-KR-Standard-D",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "lt-LT-Standard-A",
+    "language": "lt-LT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ms-MY-Standard-A",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ms-MY-Standard-B",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ms-MY-Standard-C",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ms-MY-Standard-D",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nb-NO-Standard-A",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nb-NO-Standard-B",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nb-NO-Standard-E",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nb-NO-Standard-C",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nb-NO-Standard-D",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-NL-Standard-B",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-NL-Standard-C",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-NL-Standard-D",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-NL-Standard-A",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "nl-NL-Standard-E",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pl-PL-Standard-A",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pl-PL-Standard-B",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pl-PL-Standard-C",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pl-PL-Standard-E",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pl-PL-Standard-D",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-PT-Standard-A",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-PT-Standard-B",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-PT-Standard-C",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "pt-PT-Standard-D",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ru-RU-Standard-E",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ru-RU-Standard-A",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ru-RU-Standard-B",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ru-RU-Standard-C",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ru-RU-Standard-D",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "sk-SK-Standard-A",
+    "language": "sk-SK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "th-TH-Standard-A",
+    "language": "th-TH",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "tr-TR-Standard-B",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "tr-TR-Standard-C",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "tr-TR-Standard-D",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "tr-TR-Standard-A",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "tr-TR-Standard-E",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "uk-UA-Standard-A",
+    "language": "uk-UA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "vi-VN-Standard-A",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "vi-VN-Standard-B",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "vi-VN-Standard-C",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "vi-VN-Standard-D",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "standard"
+  },
+  {
+    "name": "ar-XA-Wavenet-A",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ar-XA-Wavenet-B",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ar-XA-Wavenet-C",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ar-XA-Wavenet-D",
+    "language": "ar-XA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "bn-IN-Wavenet-A",
+    "language": "bn-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "bn-IN-Wavenet-B",
+    "language": "bn-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-GB-Wavenet-A",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-GB-Wavenet-B",
+    "language": "en-GB",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-GB-Wavenet-C",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-GB-Wavenet-D",
+    "language": "en-GB",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-GB-Wavenet-F",
+    "language": "en-GB",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-CA-Wavenet-A",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-CA-Wavenet-B",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-CA-Wavenet-C",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-CA-Wavenet-D",
+    "language": "fr-CA",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-G",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-H",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-I",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-J",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-A",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-B",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-C",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-D",
+    "language": "en-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-E",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-US-Wavenet-F",
+    "language": "en-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-ES-Wavenet-C",
+    "language": "es-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-ES-Wavenet-D",
+    "language": "es-ES",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-ES-Wavenet-B",
+    "language": "es-ES",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fi-FI-Wavenet-A",
+    "language": "fi-FI",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "gu-IN-Wavenet-A",
+    "language": "gu-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "gu-IN-Wavenet-B",
+    "language": "gu-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ja-JP-Wavenet-B",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ja-JP-Wavenet-C",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ja-JP-Wavenet-D",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ja-JP-Wavenet-A",
+    "language": "ja-JP",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "kn-IN-Wavenet-A",
+    "language": "kn-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "kn-IN-Wavenet-B",
+    "language": "kn-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ml-IN-Wavenet-A",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ml-IN-Wavenet-B",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ml-IN-Wavenet-C",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ml-IN-Wavenet-D",
+    "language": "ml-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "mr-IN-Wavenet-A",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "mr-IN-Wavenet-B",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "mr-IN-Wavenet-C",
+    "language": "mr-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sv-SE-Wavenet-A",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sv-SE-Wavenet-B",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sv-SE-Wavenet-C",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sv-SE-Wavenet-D",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sv-SE-Wavenet-E",
+    "language": "sv-SE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ta-IN-Wavenet-A",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ta-IN-Wavenet-B",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ta-IN-Wavenet-C",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ta-IN-Wavenet-D",
+    "language": "ta-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "tr-TR-Wavenet-B",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "tr-TR-Wavenet-C",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "tr-TR-Wavenet-D",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "tr-TR-Wavenet-E",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "tr-TR-Wavenet-A",
+    "language": "tr-TR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ms-MY-Wavenet-A",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ms-MY-Wavenet-B",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ms-MY-Wavenet-C",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ms-MY-Wavenet-D",
+    "language": "ms-MY",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pa-IN-Wavenet-A",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pa-IN-Wavenet-B",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pa-IN-Wavenet-C",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pa-IN-Wavenet-D",
+    "language": "pa-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cs-CZ-Wavenet-A",
+    "language": "cs-CZ",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-AU-Wavenet-A",
+    "language": "en-AU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-AU-Wavenet-B",
+    "language": "en-AU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-AU-Wavenet-C",
+    "language": "en-AU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-AU-Wavenet-D",
+    "language": "en-AU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-IN-Wavenet-D",
+    "language": "en-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-IN-Wavenet-A",
+    "language": "en-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-IN-Wavenet-B",
+    "language": "en-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "en-IN-Wavenet-C",
+    "language": "en-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-US-Wavenet-A",
+    "language": "es-US",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-US-Wavenet-B",
+    "language": "es-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "es-US-Wavenet-C",
+    "language": "es-US",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-FR-Wavenet-E",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-FR-Wavenet-A",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-FR-Wavenet-B",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-FR-Wavenet-C",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fr-FR-Wavenet-D",
+    "language": "fr-FR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "hi-IN-Wavenet-D",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "hi-IN-Wavenet-A",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "hi-IN-Wavenet-B",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "hi-IN-Wavenet-C",
+    "language": "hi-IN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "id-ID-Wavenet-D",
+    "language": "id-ID",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "id-ID-Wavenet-A",
+    "language": "id-ID",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "id-ID-Wavenet-B",
+    "language": "id-ID",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "id-ID-Wavenet-C",
+    "language": "id-ID",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ko-KR-Wavenet-A",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ko-KR-Wavenet-B",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ko-KR-Wavenet-C",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ko-KR-Wavenet-D",
+    "language": "ko-KR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "uk-UA-Wavenet-A",
+    "language": "uk-UA",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-CN-Wavenet-A",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-CN-Wavenet-B",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-CN-Wavenet-C",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-CN-Wavenet-D",
+    "language": "cmn-CN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-TW-Wavenet-A",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-TW-Wavenet-B",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "cmn-TW-Wavenet-C",
+    "language": "cmn-TW",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "da-DK-Wavenet-C",
+    "language": "da-DK",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "da-DK-Wavenet-D",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "da-DK-Wavenet-E",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "da-DK-Wavenet-A",
+    "language": "da-DK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "el-GR-Wavenet-A",
+    "language": "el-GR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "it-IT-Wavenet-A",
+    "language": "it-IT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "it-IT-Wavenet-B",
+    "language": "it-IT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "it-IT-Wavenet-C",
+    "language": "it-IT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "it-IT-Wavenet-D",
+    "language": "it-IT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fil-PH-Wavenet-A",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fil-PH-Wavenet-B",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fil-PH-Wavenet-C",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "fil-PH-Wavenet-D",
+    "language": "fil-PH",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "hu-HU-Wavenet-A",
+    "language": "hu-HU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nb-NO-Wavenet-A",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nb-NO-Wavenet-B",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nb-NO-Wavenet-C",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nb-NO-Wavenet-D",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nb-NO-Wavenet-E",
+    "language": "nb-NO",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-BE-Wavenet-A",
+    "language": "nl-BE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-BE-Wavenet-B",
+    "language": "nl-BE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-NL-Wavenet-B",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-NL-Wavenet-C",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-NL-Wavenet-D",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-NL-Wavenet-A",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "nl-NL-Wavenet-E",
+    "language": "nl-NL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-PT-Wavenet-A",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-PT-Wavenet-B",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-PT-Wavenet-C",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-PT-Wavenet-D",
+    "language": "pt-PT",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "vi-VN-Wavenet-A",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "vi-VN-Wavenet-B",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "vi-VN-Wavenet-C",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "vi-VN-Wavenet-D",
+    "language": "vi-VN",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pl-PL-Wavenet-A",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pl-PL-Wavenet-B",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pl-PL-Wavenet-C",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pl-PL-Wavenet-E",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pl-PL-Wavenet-D",
+    "language": "pl-PL",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-BR-Wavenet-A",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-BR-Wavenet-B",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "pt-BR-Wavenet-C",
+    "language": "pt-BR",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-F",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-A",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-B",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-C",
+    "language": "de-DE",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-D",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "de-DE-Wavenet-E",
+    "language": "de-DE",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ru-RU-Wavenet-E",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ru-RU-Wavenet-A",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ru-RU-Wavenet-B",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ru-RU-Wavenet-C",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "ru-RU-Wavenet-D",
+    "language": "ru-RU",
+    "ssmlVoiceGender": "male",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  },
+  {
+    "name": "sk-SK-Wavenet-A",
+    "language": "sk-SK",
+    "ssmlVoiceGender": "female",
+    "naturalSampleRateHertz": 24000,
+    "supportedEngine": "neural"
+  }
+]

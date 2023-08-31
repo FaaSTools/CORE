@@ -1,0 +1,23 @@
+Function:  speech-recognition-core
+Provider: GCP
+Region:  us-east1
+Upload 1: 16 seconds
+Deployment 1: 64 seconds
+Upload 2: 20 seconds
+Deployment 2: 67 seconds
+Upload 3: 22 seconds
+Deployment 3: 55 seconds
+Upload 4: 20 seconds
+Deployment 4: 70 seconds
+Upload 5: 16 seconds
+Deployment 5: 66 seconds
+Upload 6: 17 seconds
+Deployment 6: 75 seconds
+Upload 7: 18 seconds
+Deployment 7: 73 seconds
+Upload 8: 16 seconds
+Deployment 8: 81 seconds
+Upload 9: 19 seconds
+Deployment 9: 72 seconds
+Upload 10: 17 seconds
+Deployment 10: 73 seconds

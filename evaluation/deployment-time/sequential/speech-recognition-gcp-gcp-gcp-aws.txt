@@ -1,0 +1,210 @@
+availableMemoryMb: 256
+buildId: a1553613-d70e-4cbd-800f-ad541bec5893
+buildName: projects/969561739121/locations/us-east1/builds/a1553613-d70e-4cbd-800f-ad541bec5893
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:04:42.089Z'
+versionId: '1'
+Upload 1: 11 seconds
+Deployment 1: 67 seconds
+availableMemoryMb: 256
+buildId: dfdc96c4-c13e-49ed-aba0-9a7273e0fcc3
+buildName: projects/969561739121/locations/us-east1/builds/dfdc96c4-c13e-49ed-aba0-9a7273e0fcc3
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:06:15.407Z'
+versionId: '1'
+Upload 2: 17 seconds
+Deployment 2: 67 seconds
+availableMemoryMb: 256
+buildId: 324eeb5e-cb24-421f-a6c6-59f5a520fe05
+buildName: projects/969561739121/locations/us-east1/builds/324eeb5e-cb24-421f-a6c6-59f5a520fe05
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:07:37.631Z'
+versionId: '1'
+Upload 3: 9 seconds
+Deployment 3: 65 seconds
+availableMemoryMb: 256
+buildId: eb8e88e8-7142-450d-90bd-50b61a2ee70d
+buildName: projects/969561739121/locations/us-east1/builds/eb8e88e8-7142-450d-90bd-50b61a2ee70d
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:08:56.754Z'
+versionId: '1'
+Upload 4: 7 seconds
+Deployment 4: 62 seconds
+availableMemoryMb: 256
+buildId: 9a6b3178-1134-4977-8ea1-f91054a1baa9
+buildName: projects/969561739121/locations/us-east1/builds/9a6b3178-1134-4977-8ea1-f91054a1baa9
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:10:25.752Z'
+versionId: '1'
+Upload 5: 8 seconds
+Deployment 5: 72 seconds
+availableMemoryMb: 256
+buildId: de9d148f-6c0a-4ecb-860a-1e13be81a58d
+buildName: projects/969561739121/locations/us-east1/builds/de9d148f-6c0a-4ecb-860a-1e13be81a58d
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:11:50.680Z'
+versionId: '1'
+Upload 6: 10 seconds
+Deployment 6: 65 seconds
+availableMemoryMb: 256
+buildId: 27b40bff-5392-4a26-9e63-4f3b2ec5d056
+buildName: projects/969561739121/locations/us-east1/builds/27b40bff-5392-4a26-9e63-4f3b2ec5d056
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:13:11.276Z'
+versionId: '1'
+Upload 7: 11 seconds
+Deployment 7: 60 seconds
+availableMemoryMb: 256
+buildId: aaaebbf6-3a6b-4d36-9284-6de1e07bb043
+buildName: projects/969561739121/locations/us-east1/builds/aaaebbf6-3a6b-4d36-9284-6de1e07bb043
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:14:35.923Z'
+versionId: '1'
+Upload 8: 9 seconds
+Deployment 8: 66 seconds
+availableMemoryMb: 256
+buildId: 9126783f-eb06-43a3-981b-019b9549a3d8
+buildName: projects/969561739121/locations/us-east1/builds/9126783f-eb06-43a3-981b-019b9549a3d8
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:16:04.832Z'
+versionId: '1'
+Upload 9: 8 seconds
+Deployment 9: 71 seconds
+availableMemoryMb: 256
+buildId: 6f16f839-3a01-4a31-b011-7665d85c99d7
+buildName: projects/969561739121/locations/us-east1/builds/6f16f839-3a01-4a31-b011-7665d85c99d7
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-recognition-gcp-gcp-aws.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:17:32.004Z'
+versionId: '1'
+Upload 10: 11 seconds
+Deployment 10: 67 seconds

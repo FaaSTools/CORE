@@ -1,0 +1,6 @@
+{
+  "inputBucket": "tommi-test-bucket",
+  "inputFile": "recognition.wav",
+  "outputBucket": "tommi-test-bucket",
+  "outputFile": "recognition-output-google.json"
+}

@@ -1,0 +1,210 @@
+availableMemoryMb: 256
+buildId: e8e4bd3b-7617-4c7a-b33e-c3fa700d1a7c
+buildName: projects/969561739121/locations/us-east1/builds/e8e4bd3b-7617-4c7a-b33e-c3fa700d1a7c
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:36:46.186Z'
+versionId: '1'
+Upload 1: 25 seconds
+Deployment 1: 73 seconds
+availableMemoryMb: 256
+buildId: 75ad2238-d050-4dc6-b8ca-171e05313bf5
+buildName: projects/969561739121/locations/us-east1/builds/75ad2238-d050-4dc6-b8ca-171e05313bf5
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:38:20.406Z'
+versionId: '1'
+Upload 2: 22 seconds
+Deployment 2: 65 seconds
+availableMemoryMb: 256
+buildId: df5e29c6-b436-4583-9560-57962c19c22e
+buildName: projects/969561739121/locations/us-east1/builds/df5e29c6-b436-4583-9560-57962c19c22e
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:39:54.090Z'
+versionId: '1'
+Upload 3: 20 seconds
+Deployment 3: 67 seconds
+availableMemoryMb: 256
+buildId: a102d7b3-3862-48b2-8914-563c2355cbcc
+buildName: projects/969561739121/locations/us-east1/builds/a102d7b3-3862-48b2-8914-563c2355cbcc
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:41:24.518Z'
+versionId: '1'
+Upload 4: 13 seconds
+Deployment 4: 66 seconds
+availableMemoryMb: 256
+buildId: 015b6867-0c4a-461a-80fa-72091c6c1624
+buildName: projects/969561739121/locations/us-east1/builds/015b6867-0c4a-461a-80fa-72091c6c1624
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:43:01.277Z'
+versionId: '1'
+Upload 5: 14 seconds
+Deployment 5: 75 seconds
+availableMemoryMb: 256
+buildId: c9c41ed0-6ae4-401e-80d1-10af416e33b4
+buildName: projects/969561739121/locations/us-east1/builds/c9c41ed0-6ae4-401e-80d1-10af416e33b4
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:44:44.353Z'
+versionId: '1'
+Upload 6: 16 seconds
+Deployment 6: 78 seconds
+availableMemoryMb: 256
+buildId: 95c0151c-8362-45a1-a49a-63995fd1c645
+buildName: projects/969561739121/locations/us-east1/builds/95c0151c-8362-45a1-a49a-63995fd1c645
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:46:11.507Z'
+versionId: '1'
+Upload 7: 14 seconds
+Deployment 7: 66 seconds
+availableMemoryMb: 256
+buildId: ae6b8842-bbc5-4f48-8d62-9e210a2b0234
+buildName: projects/969561739121/locations/us-east1/builds/ae6b8842-bbc5-4f48-8d62-9e210a2b0234
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:47:58.844Z'
+versionId: '1'
+Upload 8: 16 seconds
+Deployment 8: 84 seconds
+availableMemoryMb: 256
+buildId: 53132efc-0e61-4069-b802-bec784d1e174
+buildName: projects/969561739121/locations/us-east1/builds/53132efc-0e61-4069-b802-bec784d1e174
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:49:51.815Z'
+versionId: '1'
+Upload 9: 16 seconds
+Deployment 9: 88 seconds
+availableMemoryMb: 256
+buildId: aae266d0-4d17-4a5f-a2ef-3a7fe16d97a4
+buildName: projects/969561739121/locations/us-east1/builds/aae266d0-4d17-4a5f-a2ef-3a7fe16d97a4
+dockerRegistry: CONTAINER_REGISTRY
+entryPoint: function.NoOpFunction
+httpsTrigger:
+  securityLevel: SECURE_ALWAYS
+  url: https://us-east1-wide-net-377808.cloudfunctions.net/my-function
+ingressSettings: ALLOW_ALL
+labels:
+  deployment-tool: cli-gcloud
+name: projects/wide-net-377808/locations/us-east1/functions/my-function
+runtime: java11
+serviceAccountEmail: wide-net-377808@appspot.gserviceaccount.com
+sourceArchiveUrl: gs://bucket-8918212121/speech-synthesis-aws-aws-gcp.jar.zip
+status: ACTIVE
+timeout: 60s
+updateTime: '2023-04-04T12:51:40.781Z'
+versionId: '1'
+Upload 10: 18 seconds
+Deployment 10: 82 seconds
