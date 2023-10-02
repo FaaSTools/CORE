@@ -1,13 +1,12 @@
 package ocr;
 
+import java.io.IOException;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
 import shared.Runtime;
 import storage.Storage;
 import storage.StorageImpl;
-
-import java.io.IOException;
 
 public class OcrProviderFactoryImpl implements OcrProviderFactory {
 
@@ -34,4 +33,15 @@ public class OcrProviderFactoryImpl implements OcrProviderFactory {
         throw new RuntimeException("Failed to initialize translate provider.");
     }
 
+  @Override
+  public OcrProvider getProvider(Provider provider, String serviceRegion) throws IOException {
+    Storage storage = new StorageImpl(credentials);
+    if (provider.equals(Provider.AWS)) {
+      return new OcrProviderAmazon(credentials, runtime, storage, configuration, serviceRegion);
+    }
+    if (provider.equals(Provider.GCP)) {
+      return new OcrProviderGoogle(credentials, runtime, storage, configuration, serviceRegion);
+    }
+    throw new RuntimeException("Failed to initialize translate provider.");
+  }
 }

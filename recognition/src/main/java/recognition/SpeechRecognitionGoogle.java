@@ -6,6 +6,10 @@ import com.google.cloud.speech.v1p1beta1.*;
 import com.google.gson.Gson;
 import com.google.protobuf.BoolValue;
 import com.google.protobuf.ByteString;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import lombok.ToString;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -16,17 +20,15 @@ import shared.Runtime;
 import storage.FileInfo;
 import storage.Storage;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 @ToString
 public class SpeechRecognitionGoogle implements SpeechRecognition {
 
+  private static final String ENDPOINT = "%s-speech.googleapis.com:443";
   private Credentials credentials;
   private Storage storage;
   private Runtime runtime;
   private Configuration configuration;
+  private String serviceRegion;
 
   public SpeechRecognitionGoogle(
       Credentials credentials, Runtime runtime, Storage storage, Configuration configuration) {
@@ -34,6 +36,16 @@ public class SpeechRecognitionGoogle implements SpeechRecognition {
     this.runtime = runtime;
     this.storage = storage;
     this.configuration = configuration;
+  }
+
+  public SpeechRecognitionGoogle(
+      Credentials credentials,
+      Runtime runtime,
+      Storage storage,
+      Configuration configuration,
+      String serviceRegion) {
+    this(credentials, runtime, storage, configuration);
+    this.serviceRegion = serviceRegion;
   }
 
   @Override
@@ -154,11 +166,15 @@ public class SpeechRecognitionGoogle implements SpeechRecognition {
   }
 
   private SpeechClient getSpeechClient() throws IOException {
-    SpeechSettings settings =
+    SpeechSettings.Builder builder =
         SpeechSettings.newBuilder()
             .setCredentialsProvider(
-                FixedCredentialsProvider.create(credentials.getGcpCredentials()))
-            .build();
-    return SpeechClient.create(settings);
+                FixedCredentialsProvider.create(
+                    Optional.ofNullable(credentials.getGcpClientCredentials())
+                        .orElse(credentials.getGcpCredentials())));
+    if (serviceRegion != null && !serviceRegion.isEmpty()) {
+      builder.setEndpoint(String.format(ENDPOINT, serviceRegion));
+    }
+    return SpeechClient.create(builder.build());
   }
 }

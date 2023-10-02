@@ -1,5 +1,8 @@
 package ocr;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.net.URI;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
@@ -11,16 +14,13 @@ import software.amazon.awssdk.services.textract.model.*;
 import storage.FileInfo;
 import storage.Storage;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.net.URI;
-
 public class OcrProviderAmazon implements OcrProvider {
 
     private Credentials credentials;
     private Storage storage;
     private Runtime runtime;
     private Configuration configuration;
+  private String serviceRegion;
 
     public OcrProviderAmazon(
             Credentials credentials, Runtime runtime, Storage storage, Configuration configuration) {
@@ -30,23 +30,37 @@ public class OcrProviderAmazon implements OcrProvider {
         this.configuration = configuration;
     }
 
+  public OcrProviderAmazon(
+      Credentials credentials,
+      Runtime runtime,
+      Storage storage,
+      Configuration configuration,
+      String serviceRegion) {
+    this(credentials, runtime, storage, configuration);
+    this.serviceRegion = serviceRegion;
+  }
+
     @Override
     public OcrResponse extract(String inputFile) throws Exception {
         FileInfo inputFileInfo = FileInfo.parse(inputFile);
-        String serviceRegion;
+    String automatedServiceRegion;
         Document doc;
         if (!inputFileInfo.isLocal() && Provider.AWS.equals(inputFileInfo.getBucketInfo().getProvider())) {
-            serviceRegion = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
+      automatedServiceRegion = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
             S3Object s3Object = S3Object.builder().bucket(inputFileInfo.getBucketInfo().getBucketName()).name(inputFileInfo.getFileName()).build();
             doc = Document.builder().s3Object(s3Object).build();
         }else{
-            serviceRegion = selectRegion();
+      automatedServiceRegion = selectRegion();
             byte[] data = storage.read(inputFile);
             ByteArrayInputStream sourceStream = new ByteArrayInputStream(data);
             SdkBytes sourceBytes = SdkBytes.fromInputStream(sourceStream);
             doc = Document.builder().bytes(sourceBytes).build();
         }
-        // invoke service
+    // invoke service
+    serviceRegion =
+        (serviceRegion != null && !serviceRegion.isEmpty())
+            ? serviceRegion
+            : automatedServiceRegion;
         TextractClient textractClient = getTextractClient(serviceRegion);
         DetectDocumentTextRequest detectDocumentTextRequest =
                 DetectDocumentTextRequest.builder().document(doc).build();

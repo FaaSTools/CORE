@@ -4,18 +4,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.gax.core.FixedCredentialsProvider;
 import com.google.cloud.texttospeech.v1.*;
 import com.google.protobuf.ByteString;
+import java.io.IOException;
+import java.util.Optional;
 import shared.*;
 import shared.Runtime;
 import storage.Storage;
 
-import java.io.IOException;
-
 public class SpeechSynthesisGoogle implements SpeechSynthesis {
 
+  private static final String ENDPOINT = "%s-texttospeech.googleapis.com:443";
   private Credentials credentials;
   private Storage storage;
   private Runtime runtime;
   private Configuration configuration;
+  private String serviceRegion;
 
   public SpeechSynthesisGoogle(
       Credentials credentials, Storage storage, Configuration configuration, Runtime runtime) {
@@ -25,13 +27,19 @@ public class SpeechSynthesisGoogle implements SpeechSynthesis {
     this.runtime = runtime;
   }
 
+  public SpeechSynthesisGoogle(
+      Credentials credentials,
+      Storage storage,
+      Configuration configuration,
+      Runtime runtime,
+      String serviceRegion) {
+    this(credentials, storage, configuration, runtime);
+    this.serviceRegion = serviceRegion;
+  }
+
   @Override
   public SpeechSynthesisResponse synthesizeSpeech(
-      String inputFile,
-      String language,
-      TextType textType,
-      Gender gender,
-      AudioFormat audioFormat)
+      String inputFile, String language, TextType textType, Gender gender, AudioFormat audioFormat)
       throws Exception {
     // read input text
     String text = new String(storage.read(inputFile));
@@ -67,10 +75,10 @@ public class SpeechSynthesisGoogle implements SpeechSynthesis {
     byte[] audio = byteString.toByteArray();
     long endSynthesis = System.currentTimeMillis();
     return SpeechSynthesisResponse.builder()
-            .provider(Provider.GCP)
-            .audio(audio)
-            .synthesisTime(endSynthesis - startSynthesis)
-            .build();
+        .provider(Provider.GCP)
+        .audio(audio)
+        .synthesisTime(endSynthesis - startSynthesis)
+        .build();
   }
 
   private VoiceGoogle getVoice(String languageCode, String engine, String gender)
@@ -109,11 +117,15 @@ public class SpeechSynthesisGoogle implements SpeechSynthesis {
 
   /** Create Google Text2Speech Client */
   private TextToSpeechClient getGoogleT2sClient() throws IOException {
-    TextToSpeechSettings settings =
+    TextToSpeechSettings.Builder builder =
         TextToSpeechSettings.newBuilder()
             .setCredentialsProvider(
-                FixedCredentialsProvider.create(credentials.getGcpCredentials()))
-            .build();
-    return TextToSpeechClient.create(settings);
+                FixedCredentialsProvider.create(
+                    Optional.ofNullable(credentials.getGcpClientCredentials())
+                        .orElse(credentials.getGcpCredentials())));
+    if (serviceRegion != null && !serviceRegion.isEmpty()) {
+      builder.setEndpoint(String.format(ENDPOINT, serviceRegion));
+    }
+    return TextToSpeechClient.create(builder.build());
   }
 }

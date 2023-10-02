@@ -1,6 +1,8 @@
 package synthesis;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.net.URI;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
@@ -9,15 +11,8 @@ import software.amazon.awssdk.core.ResponseInputStream;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.polly.PollyClient;
 import software.amazon.awssdk.services.polly.model.*;
-import software.amazon.awssdk.services.s3.S3Client;
-import software.amazon.awssdk.services.s3.model.CopyObjectRequest;
 import storage.BucketInfo;
-import storage.FileInfo;
 import storage.Storage;
-
-import java.io.IOException;
-import java.net.URI;
-import java.util.UUID;
 
 public class SpeechSynthesisAmazon implements SpeechSynthesis {
 
@@ -36,17 +31,25 @@ public class SpeechSynthesisAmazon implements SpeechSynthesis {
     this.runtime = runtime;
   }
 
+  public SpeechSynthesisAmazon(
+      Credentials credentials,
+      Storage storage,
+      Configuration configuration,
+      Runtime runtime,
+      String serviceRegion) {
+    this(credentials, storage, configuration, runtime);
+    this.serviceRegion = serviceRegion;
+  }
+
   @Override
   public SpeechSynthesisResponse synthesizeSpeech(
-      String inputFile,
-      String language,
-      TextType textType,
-      Gender gender,
-      AudioFormat audioFormat)
+      String inputFile, String language, TextType textType, Gender gender, AudioFormat audioFormat)
       throws Exception {
     try {
       // select region where to run the service
-      serviceRegion = selectRegionSync();
+      if (serviceRegion != null && !serviceRegion.isEmpty()) {
+        serviceRegion = selectRegionSync();
+      }
       // read the input text
       String text = new String(storage.read(inputFile));
       // get voice for language and gender
@@ -69,10 +72,10 @@ public class SpeechSynthesisAmazon implements SpeechSynthesis {
       byte[] audio = in.readAllBytes();
       long endSynthesis = System.currentTimeMillis();
       return SpeechSynthesisResponse.builder()
-              .provider(Provider.AWS)
-              .audio(audio)
-              .synthesisTime(endSynthesis - startSynthesis)
-              .build();
+          .provider(Provider.AWS)
+          .audio(audio)
+          .synthesisTime(endSynthesis - startSynthesis)
+          .build();
     } finally {
       serviceRegion = null;
     }

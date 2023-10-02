@@ -1,5 +1,14 @@
 package recognition;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
+import lombok.Getter;
 import lombok.ToString;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,15 +23,6 @@ import storage.BucketInfo;
 import storage.FileInfo;
 import storage.Storage;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.UUID;
-
 @ToString
 public class SpeechRecognitionAmazon implements SpeechRecognition {
 
@@ -31,7 +31,7 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
   private Runtime runtime;
   private Configuration configuration;
   private BucketInfo tmpInputBucket;
-  private String serviceRegion;
+  @Getter private String serviceRegion;
 
   public SpeechRecognitionAmazon(
       Credentials credentials, Runtime runtime, Storage storage, Configuration configuration) {
@@ -39,6 +39,16 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
     this.storage = storage;
     this.runtime = runtime;
     this.configuration = configuration;
+  }
+
+  public SpeechRecognitionAmazon(
+      Credentials credentials,
+      Runtime runtime,
+      Storage storage,
+      Configuration configuration,
+      String serviceRegion) {
+    this(credentials, runtime, storage, configuration);
+    this.serviceRegion = serviceRegion;
   }
 
   @Override
@@ -57,7 +67,9 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
       // parse input file url
       FileInfo inputFileInfo = FileInfo.parse(inputFile);
       // select region where to run the service
-      serviceRegion = selectRegion(inputFileInfo);
+      if (serviceRegion == null) {
+        serviceRegion = selectRegion(inputFileInfo);
+      }
       // copy the input file to temporary S3 bucket if necessary
       if (inputFileInfo.isLocal()
           || !inputFileInfo.getBucketInfo().getProvider().equals(Provider.AWS)) {

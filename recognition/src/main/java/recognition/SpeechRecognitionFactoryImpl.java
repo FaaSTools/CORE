@@ -1,12 +1,11 @@
 package recognition;
 
-import shared.Runtime;
+import java.io.IOException;
 import shared.*;
+import shared.Runtime;
 import storage.FileInfo;
 import storage.Storage;
 import storage.StorageImpl;
-
-import java.io.IOException;
 
 public class SpeechRecognitionFactoryImpl implements SpeechRecognitionFactory {
 
@@ -71,6 +70,19 @@ public class SpeechRecognitionFactoryImpl implements SpeechRecognitionFactory {
     }
     if (provider.equals(Provider.GCP)) {
       return new SpeechRecognitionGoogle(credentials, runtime, storage, configuration);
+    }
+    throw new RuntimeException("Failed to initialize S2T provider.");
+  }
+
+  @Override
+  public SpeechRecognition getS2TProvider(Provider provider, String region) {
+    Storage storage = new StorageImpl(credentials);
+    Runtime runtime = new Runtime();
+    if (provider.equals(Provider.AWS)) {
+      return new SpeechRecognitionAmazon(credentials, runtime, storage, configuration, region);
+    }
+    if (provider.equals(Provider.GCP)) {
+      return new SpeechRecognitionGoogle(credentials, runtime, storage, configuration, region);
     }
     throw new RuntimeException("Failed to initialize S2T provider.");
   }

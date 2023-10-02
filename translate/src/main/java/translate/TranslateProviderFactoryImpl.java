@@ -1,13 +1,12 @@
 package translate;
 
+import java.io.IOException;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
+import shared.Runtime;
 import storage.Storage;
 import storage.StorageImpl;
-import shared.Runtime;
-
-import java.io.IOException;
 
 public class TranslateProviderFactoryImpl implements TranslateProviderFactory {
 
@@ -34,4 +33,15 @@ public class TranslateProviderFactoryImpl implements TranslateProviderFactory {
     throw new RuntimeException("Failed to initialize translate provider.");
   }
 
+  @Override
+  public TranslateProvider getProvider(Provider provider, String region) throws IOException {
+    Storage storage = new StorageImpl(credentials);
+    if (provider.equals(Provider.AWS)) {
+      return new TranslateProviderAmazon(credentials, runtime, storage, configuration, region);
+    }
+    if (provider.equals(Provider.GCP)) {
+      return new TranslateProviderGoogle(credentials, runtime, storage, configuration, region);
+    }
+    throw new RuntimeException("Failed to initialize translate provider.");
+  }
 }

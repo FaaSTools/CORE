@@ -1,5 +1,7 @@
 package translate;
 
+import java.io.IOException;
+import java.net.URI;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
@@ -10,9 +12,6 @@ import software.amazon.awssdk.services.translate.model.TranslateTextRequest;
 import software.amazon.awssdk.services.translate.model.TranslateTextResponse;
 import storage.Storage;
 
-import java.io.IOException;
-import java.net.URI;
-
 public class TranslateProviderAmazon implements TranslateProvider {
 
   private Credentials credentials;
@@ -20,12 +19,24 @@ public class TranslateProviderAmazon implements TranslateProvider {
   private Runtime runtime;
   private Configuration configuration;
 
+  private String serviceRegion;
+
   public TranslateProviderAmazon(
       Credentials credentials, Runtime runtime, Storage storage, Configuration configuration) {
     this.credentials = credentials;
     this.storage = storage;
     this.runtime = runtime;
     this.configuration = configuration;
+  }
+
+  public TranslateProviderAmazon(
+      Credentials credentials,
+      Runtime runtime,
+      Storage storage,
+      Configuration configuration,
+      String serviceRegion) {
+    this(credentials, runtime, storage, configuration);
+    this.serviceRegion = serviceRegion;
   }
 
   @Override
@@ -49,6 +60,9 @@ public class TranslateProviderAmazon implements TranslateProvider {
   }
 
   private String selectRegion() {
+    if (serviceRegion != null && !serviceRegion.isEmpty()) {
+      return serviceRegion;
+    }
     Provider functionProvider = runtime.getFunctionProvider();
     String functionRegion = runtime.getFunctionRegion();
     if (Provider.AWS.equals(functionProvider) && functionRegion != null) {
