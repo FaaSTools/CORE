@@ -1,13 +1,13 @@
 package synthesis;
 
+import java.io.IOException;
+import java.util.List;
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
 import shared.Runtime;
 import storage.Storage;
 import storage.StorageImpl;
-
-import java.util.List;
 
 public class SpeechSynthesisFactoryImpl implements SpeechSynthesisFactory {
 
@@ -44,6 +44,19 @@ public class SpeechSynthesisFactoryImpl implements SpeechSynthesisFactory {
     }
     if (provider.equals(Provider.GCP)) {
       return new SpeechSynthesisGoogle(credentials, storage, configuration, runtime);
+    }
+    throw new RuntimeException("Provider must not be null!");
+  }
+
+  @Override
+  public SpeechSynthesis getT2SProvider(Provider provider, String region) throws IOException {
+    Storage storage = new StorageImpl(credentials);
+    Runtime runtime = new Runtime();
+    if (provider.equals(Provider.AWS)) {
+      return new SpeechSynthesisAmazon(credentials, storage, configuration, runtime, region);
+    }
+    if (provider.equals(Provider.GCP)) {
+      return new SpeechSynthesisGoogle(credentials, storage, configuration, runtime, region);
     }
     throw new RuntimeException("Provider must not be null!");
   }

@@ -13,35 +13,56 @@ public class SpeechRecognizer {
     this.configuration = configuration;
   }
 
+  private SpeechRecognitionResponse recognizeSpeech(
+      SpeechRecognitionRequest speechRecognitionRequest, SpeechRecognition recognizer)
+      throws Exception {
+    // invoke the service
+    return recognizer.recognizeSpeech(
+        speechRecognitionRequest.getInputFile(),
+        speechRecognitionRequest.getSampleRate(),
+        speechRecognitionRequest.getLanguageCode(),
+        speechRecognitionRequest.getChannelCount(),
+        false,
+        false,
+        false,
+        false,
+        false);
+  }
+
   /** Provider is explicitly selected. */
   public SpeechRecognitionResponse recognizeSpeech(
-          SpeechRecognitionRequest speechRecognitionRequest, Provider provider) throws Exception {
+      SpeechRecognitionRequest speechRecognitionRequest, Provider provider) throws Exception {
     // select provider
     Runtime runtime = new Runtime();
     SpeechRecognitionFactoryImpl factory =
-            new SpeechRecognitionFactoryImpl(configuration, credentials, runtime);
+        new SpeechRecognitionFactoryImpl(configuration, credentials, runtime);
     SpeechRecognition speechRecognizer = factory.getS2TProvider(provider);
     // invoke the service
-    SpeechRecognitionResponse response =
-            speechRecognizer.recognizeSpeech(
-                    speechRecognitionRequest.getInputFile(),
-                    speechRecognitionRequest.getSampleRate(),
-                    speechRecognitionRequest.getLanguageCode(),
-                    speechRecognitionRequest.getChannelCount(),
-                    false,
-                    false,
-                    false,
-                    false,
-                    false);
-    return response;
+    return this.recognizeSpeech(speechRecognitionRequest, speechRecognizer);
   }
 
   /**
-   * Provider is selected based on the features. If needed, the service is invoked on both
-   * providers and the result is merged.
+   * Same as {@link #recognizeSpeech(SpeechRecognitionRequest, Provider) but allows to specify the
+   * region as well}
    */
   public SpeechRecognitionResponse recognizeSpeech(
-          SpeechRecognitionRequest speechRecognitionRequest, SpeechRecognitionFeatures speechRecognitionFeatures)
+      SpeechRecognitionRequest speechRecognitionRequest, Provider provider, String region)
+      throws Exception {
+    Runtime runtime = new Runtime();
+    SpeechRecognitionFactoryImpl factory =
+        new SpeechRecognitionFactoryImpl(configuration, credentials, runtime);
+    SpeechRecognition speechRecognizer = factory.getS2TProvider(provider, region);
+    // invoke the service
+    return this.recognizeSpeech(speechRecognitionRequest, speechRecognizer);
+  }
+
+  /**
+   * Provider is selected based on the features. If needed, the service is invoked on both providers
+   * and the result is merged.
+   */
+  public SpeechRecognitionResponse recognizeSpeech(
+      SpeechRecognitionRequest speechRecognitionRequest,
+      SpeechRecognitionFeatures speechRecognitionFeatures)
       throws Exception {
     // select provider
     Runtime runtime = new Runtime();
@@ -64,27 +85,14 @@ public class SpeechRecognizer {
   }
 
   /** Provider is selected based on the location of the input. */
-  public SpeechRecognitionResponse recognizeSpeech(SpeechRecognitionRequest speechRecognitionRequest)
-      throws Exception {
+  public SpeechRecognitionResponse recognizeSpeech(
+      SpeechRecognitionRequest speechRecognitionRequest) throws Exception {
     // select provider
     Runtime runtime = new Runtime();
     SpeechRecognitionFactoryImpl factory =
         new SpeechRecognitionFactoryImpl(configuration, credentials, runtime);
-    SpeechRecognition provider =
-        factory.getS2TProvider(speechRecognitionRequest.getInputFile());
+    SpeechRecognition provider = factory.getS2TProvider(speechRecognitionRequest.getInputFile());
     // invoke the service
-    SpeechRecognitionResponse response =
-        provider.recognizeSpeech(
-            speechRecognitionRequest.getInputFile(),
-            speechRecognitionRequest.getSampleRate(),
-            speechRecognitionRequest.getLanguageCode(),
-            speechRecognitionRequest.getChannelCount(),
-            false,
-            false,
-            false,
-            false,
-            false);
-    return response;
+    return this.recognizeSpeech(speechRecognitionRequest, provider);
   }
-
 }

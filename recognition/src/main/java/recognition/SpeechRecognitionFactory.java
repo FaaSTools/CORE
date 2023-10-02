@@ -1,8 +1,7 @@
 package recognition;
 
-import shared.Provider;
-
 import java.io.IOException;
+import shared.Provider;
 
 public interface SpeechRecognitionFactory {
 
@@ -10,5 +9,8 @@ public interface SpeechRecognitionFactory {
 
   SpeechRecognition getS2TProvider(Provider provider) throws IOException;
 
-  SpeechRecognition getS2TProvider(SpeechRecognitionFeatures speechRecognitionFeatures) throws IOException;
+  SpeechRecognition getS2TProvider(SpeechRecognitionFeatures speechRecognitionFeatures)
+      throws IOException;
+
+  SpeechRecognition getS2TProvider(Provider provider, String region);
 }

@@ -3,6 +3,12 @@ package shared;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.auth.oauth2.GoogleCredentials;
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,13 +18,6 @@ import software.amazon.awssdk.auth.credentials.AwsCredentials;
 import software.amazon.awssdk.auth.credentials.AwsSessionCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 
-import java.io.ByteArrayInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Map;
-
 @Getter
 @Setter
 @ToString
@@ -27,6 +26,14 @@ public class Credentials {
   private StaticCredentialsProvider awsCredentials;
   private GoogleCredentials gcpCredentials;
   private String googleProjectId;
+  private GoogleCredentials gcpClientCredentials;
+
+  private Credentials(String credentialsString) throws IOException {
+    this.awsCredentials = getAwsCredentialsV2(credentialsString);
+    this.gcpCredentials = getGoogleServiceCredentials(credentialsString);
+    this.googleProjectId = getGoogleProjectId(credentialsString);
+    this.gcpClientCredentials = getGoogleClientCredentials(credentialsString);
+  }
 
   public static Credentials loadDefaultCredentials() throws IOException {
     return loadFromResourceFolder("credentials.json");
@@ -43,10 +50,10 @@ public class Credentials {
     return new Credentials(credentialsString);
   }
 
-  private Credentials(String credentialsString) throws IOException {
-    this.awsCredentials = getAwsCredentialsV2(credentialsString);
-    this.gcpCredentials = getGoogleServiceCredentials(credentialsString);
-    this.googleProjectId = getGoogleProjectId(credentialsString);
+  private static String loadCredentialsFromFile(String credentialsFilePath) throws IOException {
+    InputStream in = new FileInputStream(credentialsFilePath);
+    String credentialsString = new String(in.readAllBytes());
+    return credentialsString;
   }
 
   /** Load credentials for AWS Java SDK V2 */
@@ -74,6 +81,11 @@ public class Credentials {
     return GoogleCredentials.fromStream(in);
   }
 
+  private GoogleCredentials getGoogleClientCredentials(String credentialString) throws IOException {
+    InputStream in = getCredentialsStream(credentialString, "gcp_client_credentials");
+    return GoogleCredentials.fromStream(in);
+  }
+
   private Map<String, String> getCredentialsMap(String credentialsString, String key)
       throws IOException {
     JSONObject jsonRoot = new JSONObject(credentialsString);
@@ -88,12 +100,6 @@ public class Credentials {
     JSONObject jsonRoot = new JSONObject(credentialsString);
     String gcpClientCredentials = jsonRoot.getJSONObject(key).toString();
     return new ByteArrayInputStream(gcpClientCredentials.getBytes(StandardCharsets.UTF_8));
-  }
-
-  private static String loadCredentialsFromFile(String credentialsFilePath) throws IOException {
-    InputStream in = new FileInputStream(credentialsFilePath);
-    String credentialsString = new String(in.readAllBytes());
-    return credentialsString;
   }
 
   /** Retrieve the google client project id from the google client credentials file. */

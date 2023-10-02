@@ -15,11 +15,12 @@ public class TranslateService {
         this.configuration = configuration;
     }
 
-    public TranslateResponse translate(TranslateRequest translateRequest, Provider provider) throws Exception {
+  public TranslateResponse translate(
+      TranslateRequest translateRequest, Provider provider, String region) throws Exception {
         // select provider
         Runtime runtime = new Runtime();
         TranslateProviderFactoryImpl factory = new TranslateProviderFactoryImpl(configuration, credentials, runtime);
-        TranslateProvider translateProvider = factory.getProvider(provider);
+    TranslateProvider translateProvider = factory.getProvider(provider, region);
         // invoke the service
         TranslateResponse response = translateProvider.translate(
                 translateRequest.getInputFile(),

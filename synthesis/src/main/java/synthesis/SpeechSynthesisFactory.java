@@ -1,8 +1,7 @@
 package synthesis;
 
-import shared.Provider;
-
 import java.io.IOException;
+import shared.Provider;
 
 public interface SpeechSynthesisFactory {
 
@@ -15,6 +14,5 @@ public interface SpeechSynthesisFactory {
   /** Select provider based on the function location. */
   SpeechSynthesis getT2SProvider() throws Exception;
 
-
-
+  SpeechSynthesis getT2SProvider(Provider provider, String region) throws IOException;
 }
