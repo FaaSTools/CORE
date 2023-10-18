@@ -12,10 +12,10 @@ import storage.Storage;
 public class TranslateProviderGoogle implements TranslateProvider {
 
   private static final String ENDPOINT = "translate-%s.googleapis.com:443";
-  private Credentials credentials;
-  private Storage storage;
-  private Runtime runtime;
-  private Configuration configuration;
+  private final Credentials credentials;
+  private final Storage storage;
+  private final Runtime runtime;
+  private final Configuration configuration;
   private String serviceRegion;
 
   public TranslateProviderGoogle(
@@ -52,11 +52,16 @@ public class TranslateProviderGoogle implements TranslateProvider {
       requestBuilder.setParent(
           LocationName.of(credentials.getGoogleProjectId(), serviceRegion).toString());
     }
+    long startTime = System.currentTimeMillis();
     TranslationServiceClient translateClient = getTranslateClient();
     TranslateTextResponse response = translateClient.translateText(requestBuilder.build());
     String translatedText = response.getTranslations(0).getTranslatedText();
+    long endTime = System.currentTimeMillis();
     // return response
-    return TranslateResponse.builder().text(translatedText).build();
+    return TranslateResponse.builder()
+        .translateTime(endTime - startTime)
+        .text(translatedText)
+        .build();
   }
 
   public TranslationServiceClient getTranslateClient() throws IOException {

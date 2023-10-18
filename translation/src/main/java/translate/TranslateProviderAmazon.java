@@ -14,10 +14,10 @@ import storage.Storage;
 
 public class TranslateProviderAmazon implements TranslateProvider {
 
-  private Credentials credentials;
-  private Storage storage;
-  private Runtime runtime;
-  private Configuration configuration;
+  private final Credentials credentials;
+  private final Storage storage;
+  private final Runtime runtime;
+  private final Configuration configuration;
 
   private String serviceRegion;
 
@@ -46,6 +46,7 @@ public class TranslateProviderAmazon implements TranslateProvider {
     // read the input text
     String text = new String(storage.read(inputFile));
     // translate text
+    long startTime = System.currentTimeMillis();
     TranslateClient translateClient = getTranslateClient(serviceRegion);
     TranslateTextRequest textRequest =
         TranslateTextRequest.builder()
@@ -54,9 +55,13 @@ public class TranslateProviderAmazon implements TranslateProvider {
             .text(text)
             .build();
     TranslateTextResponse textResponse = translateClient.translateText(textRequest);
+    long endTime = System.currentTimeMillis();
     String translatedText = textResponse.translatedText();
     // return response
-    return TranslateResponse.builder().text(translatedText).build();
+    return TranslateResponse.builder()
+        .translateTime(endTime - startTime)
+        .text(translatedText)
+        .build();
   }
 
   private String selectRegion() {

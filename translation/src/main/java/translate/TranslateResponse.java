@@ -8,5 +8,6 @@ import lombok.*;
 @Getter
 @Setter
 public class TranslateResponse {
-    private String text;
+  private String text;
+  private long translateTime;
 }
