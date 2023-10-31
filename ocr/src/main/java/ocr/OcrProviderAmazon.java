@@ -43,11 +43,25 @@ public class OcrProviderAmazon implements OcrProvider {
   @Override
   public OcrResponse extract(String inputFile) throws Exception {
     FileInfo inputFileInfo = FileInfo.parse(inputFile);
-    String automatedServiceRegion;
+    boolean callByValue = inputFileInfo.isLocal();
+
+    if (!callByValue && !Provider.AWS.equals(inputFileInfo.getBucketInfo().getProvider())) {
+      callByValue = true;
+    }
+
+    if (!callByValue) {
+      String storageRegion = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
+      if (this.serviceRegion != null
+          && !this.serviceRegion.isEmpty()
+          && !this.serviceRegion.equals(storageRegion)) {
+        callByValue = true;
+      }
+    }
+
+    String region;
     Document doc;
-    if (!inputFileInfo.isLocal()
-        && Provider.AWS.equals(inputFileInfo.getBucketInfo().getProvider())) {
-      automatedServiceRegion = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
+    if (!callByValue) {
+      region = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
       S3Object s3Object =
           S3Object.builder()
               .bucket(inputFileInfo.getBucketInfo().getBucketName())
@@ -55,19 +69,16 @@ public class OcrProviderAmazon implements OcrProvider {
               .build();
       doc = Document.builder().s3Object(s3Object).build();
     } else {
-      automatedServiceRegion = selectRegion();
+      region = this.serviceRegion != null ? this.serviceRegion : selectRegion();
       byte[] data = storage.read(inputFile);
       ByteArrayInputStream sourceStream = new ByteArrayInputStream(data);
       SdkBytes sourceBytes = SdkBytes.fromInputStream(sourceStream);
       doc = Document.builder().bytes(sourceBytes).build();
     }
+
     // invoke service
     long startTime = System.currentTimeMillis();
-    serviceRegion =
-        (serviceRegion != null && !serviceRegion.isEmpty())
-            ? serviceRegion
-            : automatedServiceRegion;
-    TextractClient textractClient = getTextractClient(serviceRegion);
+    TextractClient textractClient = getTextractClient(region);
     DetectDocumentTextRequest detectDocumentTextRequest =
         DetectDocumentTextRequest.builder().document(doc).build();
     DetectDocumentTextResponse response =
