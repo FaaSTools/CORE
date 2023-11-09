@@ -15,6 +15,7 @@
         <module>shared</module>
         <module>translation</module>
         <module>ocr</module>
+        <module>benchmark</module>
     </modules>
 
     <properties>
