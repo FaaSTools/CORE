@@ -9,5 +9,4 @@ import lombok.*;
 @Setter
 public class OcrResponse {
   private String text;
-  private long ocrTime;
 }

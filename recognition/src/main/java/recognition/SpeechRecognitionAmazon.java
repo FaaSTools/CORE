@@ -67,14 +67,12 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
       // parse input file url
       FileInfo inputFileInfo = FileInfo.parse(inputFile);
       // select region where to run the service
-      if (serviceRegion == null || serviceRegion.isEmpty()) {
+      if (serviceRegion == null) {
         serviceRegion = selectRegion(inputFileInfo);
       }
       // copy the input file to temporary S3 bucket if necessary
       if (inputFileInfo.isLocal()
-          || !inputFileInfo.getBucketInfo().getProvider().equals(Provider.AWS)
-          || !serviceRegion.equals(
-              storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl()))) {
+          || !inputFileInfo.getBucketInfo().getProvider().equals(Provider.AWS)) {
         inputFileInfo = uploadInputToTmpS3Bucket(inputFileInfo);
       }
       // invoke the service

@@ -60,7 +60,6 @@ public class OcrProviderGoogle implements OcrProvider {
       inputConfig =
           InputConfig.newBuilder().setMimeType("application/pdf").setContent(content).build();
     }
-    long startOcr = System.currentTimeMillis();
     // invoke service
     ImageAnnotatorClient imageAnnotatorClient = getCloudVisionClient();
     Feature feature = Feature.newBuilder().setType(Feature.Type.DOCUMENT_TEXT_DETECTION).build();
@@ -76,8 +75,7 @@ public class OcrProviderGoogle implements OcrProvider {
         fullText += "\n" + imageResponse.getFullTextAnnotation().getText();
       }
     }
-    long endOcr = System.currentTimeMillis();
-    return OcrResponse.builder().ocrTime(endOcr - startOcr).text(fullText).build();
+    return OcrResponse.builder().text(fullText).build();
   }
 
   /** Create google cloud vision client */
