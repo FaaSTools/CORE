@@ -43,7 +43,8 @@ public class OcrProviderAmazon implements OcrProvider {
   @Override
   public OcrResponse extract(String inputFile) throws Exception {
     FileInfo inputFileInfo = FileInfo.parse(inputFile);
-    boolean callByValue = inputFileInfo.isLocal();
+    OcrConfiguration ocrConfiguration = OcrConfiguration.createDefaultFrom(configuration);
+    boolean callByValue = inputFileInfo.isLocal() || !ocrConfiguration.isUseCallByReferenceIfPossible();
 
     if (!callByValue && !Provider.AWS.equals(inputFileInfo.getBucketInfo().getProvider())) {
       callByValue = true;
