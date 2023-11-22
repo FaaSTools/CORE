@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import lombok.Getter;
 import lombok.ToString;
 import org.json.JSONArray;
@@ -142,18 +143,36 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
   }
 
   private TranscriptionJob awaitTermination(String jobName, TranscribeClient transcribeClient) {
-    while (true) {
-      GetTranscriptionJobRequest getTranscriptionJobRequest =
-          GetTranscriptionJobRequest.builder().transcriptionJobName(jobName).build();
-      GetTranscriptionJobResponse transcriptionJobResponse =
-          transcribeClient.getTranscriptionJob(getTranscriptionJobRequest);
-      TranscriptionJobStatus status =
-          transcriptionJobResponse.transcriptionJob().transcriptionJobStatus();
-      if (status.equals(TranscriptionJobStatus.COMPLETED)) {
-        return transcriptionJobResponse.transcriptionJob();
-      } else if (status.equals(TranscriptionJobStatus.FAILED)) {
-        throw new RuntimeException("Transcription failed.");
+    AwsSpeechRecognitionConfiguration awsConfig = AwsSpeechRecognitionConfiguration.createDefaultFrom(configuration);
+    long backoffMultiplicator = awsConfig.getJobFinishedRequestBackoffFactor();
+    long backoffConstant = awsConfig.getJobFinishedRequestBackoffOffsetMillis();
+    try {
+      int numberOfRequest = 0;
+      while (true) {
+        try {
+          GetTranscriptionJobRequest getTranscriptionJobRequest =
+              GetTranscriptionJobRequest.builder().transcriptionJobName(jobName).build();
+
+          GetTranscriptionJobResponse transcriptionJobResponse =
+              transcribeClient.getTranscriptionJob(getTranscriptionJobRequest);
+
+          TranscriptionJobStatus status =
+              transcriptionJobResponse.transcriptionJob().transcriptionJobStatus();
+          if (status.equals(TranscriptionJobStatus.COMPLETED)) {
+            return transcriptionJobResponse.transcriptionJob();
+          } else if (status.equals(TranscriptionJobStatus.FAILED)) {
+            throw new RuntimeException("Transcription failed.");
+          }
+        } catch (final TranscribeException e) {
+          // job failed due to timeout, retry
+        }
+        long waitingTime = backoffConstant + backoffMultiplicator * numberOfRequest;
+        TimeUnit.MILLISECONDS.sleep(waitingTime);
+        numberOfRequest++;
       }
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      throw new RuntimeException(e);
     }
   }
 
