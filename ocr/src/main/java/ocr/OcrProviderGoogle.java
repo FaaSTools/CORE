@@ -43,9 +43,11 @@ public class OcrProviderGoogle implements OcrProvider {
   @Override
   public OcrResponse extract(String inputFile) throws Exception {
     FileInfo inputFileInfo = FileInfo.parse(inputFile);
+    OcrConfiguration ocrConfiguration = OcrConfiguration.createDefaultFrom(configuration);
     InputConfig inputConfig;
     if (!inputFileInfo.isLocal()
-        && Provider.GCP.equals(inputFileInfo.getBucketInfo().getProvider())) {
+        && Provider.GCP.equals(inputFileInfo.getBucketInfo().getProvider())
+        && ocrConfiguration.isUseCallByReferenceIfPossible()) {
       String gsutilUrl =
           "gs://"
               + inputFileInfo.getBucketInfo().getBucketName()
