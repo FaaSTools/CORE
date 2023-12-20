@@ -45,6 +45,7 @@ public class OcrProviderGoogle implements OcrProvider {
     FileInfo inputFileInfo = FileInfo.parse(inputFile);
     OcrConfiguration ocrConfiguration = OcrConfiguration.createDefaultFrom(configuration);
     InputConfig inputConfig;
+    Optional<Long> downloadTime = Optional.empty();
     if (!inputFileInfo.isLocal()
         && Provider.GCP.equals(inputFileInfo.getBucketInfo().getProvider())
         && ocrConfiguration.isUseCallByReferenceIfPossible()) {
@@ -57,10 +58,12 @@ public class OcrProviderGoogle implements OcrProvider {
       inputConfig =
           InputConfig.newBuilder().setMimeType("application/pdf").setGcsSource(gcsSource).build();
     } else {
+      long startDownload = System.currentTimeMillis();
       byte[] data = storage.read(inputFile);
       ByteString content = ByteString.copyFrom(data);
       inputConfig =
           InputConfig.newBuilder().setMimeType("application/pdf").setContent(content).build();
+      downloadTime = Optional.of(System.currentTimeMillis() - startDownload);
     }
     long startOcr = System.currentTimeMillis();
     // invoke service
@@ -79,7 +82,7 @@ public class OcrProviderGoogle implements OcrProvider {
       }
     }
     long endOcr = System.currentTimeMillis();
-    return OcrResponse.builder().ocrTime(endOcr - startOcr).text(fullText).build();
+    return OcrResponse.builder().ocrTime(endOcr - startOcr).downloadTime(downloadTime).text(fullText).build();
   }
 
   /** Create google cloud vision client */

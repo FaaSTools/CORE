@@ -10,4 +10,5 @@ import lombok.*;
 public class TranslateResponse {
   private String text;
   private long translateTime;
+  private long downloadTime;
 }
