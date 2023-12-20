@@ -41,8 +41,10 @@ public class SpeechSynthesisGoogle implements SpeechSynthesis {
   public SpeechSynthesisResponse synthesizeSpeech(
       String inputFile, String language, TextType textType, Gender gender, AudioFormat audioFormat)
       throws Exception {
+    long startDownload = System.currentTimeMillis();
     // read input text
     String text = new String(storage.read(inputFile));
+    long downloadTime = System.currentTimeMillis() - startDownload;
     // get voice for language and gender
     VoiceGoogle voice = getVoice(language, "standard", gender.name().toLowerCase());
     SsmlVoiceGender ssmlVoiceGender =
@@ -78,6 +80,7 @@ public class SpeechSynthesisGoogle implements SpeechSynthesis {
         .provider(Provider.GCP)
         .audio(audio)
         .synthesisTime(endSynthesis - startSynthesis)
+        .downloadTime(downloadTime)
         .build();
   }
 

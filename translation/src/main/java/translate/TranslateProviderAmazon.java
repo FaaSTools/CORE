@@ -43,8 +43,10 @@ public class TranslateProviderAmazon implements TranslateProvider {
   public TranslateResponse translate(String inputFile, String language) throws Exception {
     // select region where to run the service
     String serviceRegion = selectRegion();
+    long startDownload = System.currentTimeMillis();
     // read the input text
     String text = new String(storage.read(inputFile));
+    long downloadTime = System.currentTimeMillis() - startDownload;
     // translate text
     long startTime = System.currentTimeMillis();
     TranslateClient translateClient = getTranslateClient(serviceRegion);
@@ -61,6 +63,7 @@ public class TranslateProviderAmazon implements TranslateProvider {
     return TranslateResponse.builder()
         .translateTime(endTime - startTime)
         .text(translatedText)
+        .downloadTime(downloadTime)
         .build();
   }
 
