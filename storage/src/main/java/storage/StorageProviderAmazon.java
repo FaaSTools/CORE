@@ -1,5 +1,11 @@
 package storage;
 
+import java.io.IOException;
+import java.net.URI;
+import java.nio.ByteBuffer;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 import shared.Credentials;
 import software.amazon.awssdk.core.ResponseInputStream;
 import software.amazon.awssdk.core.sync.RequestBody;
@@ -7,12 +13,6 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
 import software.amazon.awssdk.services.s3.paginators.ListObjectsV2Iterable;
-
-import java.io.IOException;
-import java.net.URI;
-import java.nio.ByteBuffer;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class StorageProviderAmazon implements StorageProvider {
 
@@ -30,7 +30,7 @@ public class StorageProviderAmazon implements StorageProvider {
     GetObjectRequest getObjectRequest =
         GetObjectRequest.builder()
             .bucket(fileInfo.getBucketInfo().getBucketName())
-            .key(fileInfo.getFileName())
+            .key(fileInfo.getPath())
             .build();
     ResponseInputStream<GetObjectResponse> response = s3.getObject(getObjectRequest);
     byte[] data = response.readAllBytes();
@@ -46,7 +46,7 @@ public class StorageProviderAmazon implements StorageProvider {
     PutObjectRequest objectRequest =
         PutObjectRequest.builder()
             .bucket(fileInfo.getBucketInfo().getBucketName())
-            .key(fileInfo.getFileName())
+            .key(fileInfo.getPath())
             .build();
     s3.putObject(objectRequest, RequestBody.fromByteBuffer(ByteBuffer.wrap(data)));
     s3.close();
@@ -60,7 +60,7 @@ public class StorageProviderAmazon implements StorageProvider {
       DeleteObjectRequest deleteObjectRequest =
           DeleteObjectRequest.builder()
               .bucket(fileInfo.getBucketInfo().getBucketName())
-              .key(fileInfo.getFileName())
+              .key(fileInfo.getPath())
               .build();
       s3.deleteObject(deleteObjectRequest);
     } catch (Exception e) {
@@ -122,7 +122,7 @@ public class StorageProviderAmazon implements StorageProvider {
         s3.getBucketLocation(
             GetBucketLocationRequest.builder().bucket(bucketInfo.getBucketName()).build());
     String locationConstraint = response.locationConstraint().toString();
-    if (locationConstraint == "null") {
+    if (Objects.equals(locationConstraint, "null")) {
       return "us-east-1";
     }
     return locationConstraint;
@@ -130,12 +130,16 @@ public class StorageProviderAmazon implements StorageProvider {
 
   @Override
   public List<String> listFiles(String bucketUrl) throws IOException {
-    BucketInfo bucketInfo = BucketInfo.parse(bucketUrl);
+    FileInfo fileInfo = FileInfo.parse(bucketUrl);
+    BucketInfo bucketInfo = fileInfo.getBucketInfo();
     String region = getRegion(bucketUrl);
     S3Client s3 = getAmazonS3Client(credentials, region);
-    ListObjectsRequest listObjects =
-        ListObjectsRequest.builder().bucket(bucketInfo.getBucketName()).build();
-    ListObjectsResponse res = s3.listObjects(listObjects);
+    ListObjectsRequest.Builder listObjectsRequestBuilder =
+        ListObjectsRequest.builder().bucket(bucketInfo.getBucketName());
+    if (fileInfo.getPath() != null && !fileInfo.getPath().isBlank()) {
+      listObjectsRequestBuilder.prefix(fileInfo.getPath());
+    }
+    ListObjectsResponse res = s3.listObjects(listObjectsRequestBuilder.build());
     List<S3Object> objects = res.contents();
     List<String> fileKeys = objects.stream().map(o -> o.key()).collect(Collectors.toList());
     return fileKeys;

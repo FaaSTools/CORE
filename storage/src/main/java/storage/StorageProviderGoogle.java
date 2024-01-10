@@ -23,14 +23,14 @@ public class StorageProviderGoogle implements StorageProvider {
   public byte[] read(String fileUrl) throws Exception {
     FileInfo fileInfo = FileInfo.parse(fileUrl);
     Storage gcs = getGoogleCloudStorage(credentials);
-    return gcs.readAllBytes(fileInfo.getBucketInfo().getBucketName(), fileInfo.getFileName());
+    return gcs.readAllBytes(fileInfo.getBucketInfo().getBucketName(), fileInfo.getPath());
   }
 
   @Override
   public void write(byte[] data, String fileUrl) throws Exception {
     FileInfo fileInfo = FileInfo.parse(fileUrl);
     Storage gcs = getGoogleCloudStorage(credentials);
-    BlobId blobId = BlobId.of(fileInfo.getBucketInfo().getBucketName(), fileInfo.getFileName());
+    BlobId blobId = BlobId.of(fileInfo.getBucketInfo().getBucketName(), fileInfo.getPath());
     BlobInfo blobInfo = BlobInfo.newBuilder(blobId).build();
     gcs.createFrom(blobInfo, new ByteArrayInputStream(data));
   }
@@ -39,11 +39,11 @@ public class StorageProviderGoogle implements StorageProvider {
   public boolean delete(String fileUrl) {
     FileInfo fileInfo = FileInfo.parse(fileUrl);
     Storage gcs = getGoogleCloudStorage(credentials);
-    Blob blob = gcs.get(fileInfo.getBucketInfo().getBucketName(), fileInfo.getFileName());
+    Blob blob = gcs.get(fileInfo.getBucketInfo().getBucketName(), fileInfo.getPath());
     if (blob != null) {
       Storage.BlobSourceOption precondition =
           Storage.BlobSourceOption.generationMatch(blob.getGeneration());
-      gcs.delete(fileInfo.getBucketInfo().getBucketName(), fileInfo.getFileName(), precondition);
+      gcs.delete(fileInfo.getBucketInfo().getBucketName(), fileInfo.getPath(), precondition);
       return true;
     }
     return false;
@@ -88,9 +88,15 @@ public class StorageProviderGoogle implements StorageProvider {
 
   @Override
   public List<String> listFiles(String bucketUrl) {
-    BucketInfo bucketInfo = BucketInfo.parse(bucketUrl);
+    FileInfo fileInfo = FileInfo.parse(bucketUrl);
+    BucketInfo bucketInfo = fileInfo.getBucketInfo();
     Storage gcs = getGoogleCloudStorage(credentials);
-    Page<Blob> blobs = gcs.list(bucketInfo.getBucketName());
+    Page<Blob> blobs;
+    if (fileInfo.getPath() == null || fileInfo.getPath().isEmpty()) {
+      blobs = gcs.list(bucketInfo.getBucketName());
+    } else {
+      blobs = gcs.list(bucketInfo.getBucketName(), Storage.BlobListOption.prefix(fileInfo.getPath()));
+    }
     List<String> fileKeys = new ArrayList<>();
     for (Blob blob : blobs.iterateAll()) {
       fileKeys.add(blob.getName());
