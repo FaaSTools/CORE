@@ -50,8 +50,10 @@ public class SpeechSynthesisAmazon implements SpeechSynthesis {
       if (serviceRegion != null && !serviceRegion.isEmpty()) {
         serviceRegion = selectRegionSync();
       }
+      long startDownload = System.currentTimeMillis();
       // read the input text
       String text = new String(storage.read(inputFile));
+      long downloadTime = System.currentTimeMillis() - startDownload;
       // get voice for language and gender
       VoiceAmazon voice = getVoice(language, Engine.STANDARD, gender.name().toLowerCase());
       // create request
@@ -75,6 +77,7 @@ public class SpeechSynthesisAmazon implements SpeechSynthesis {
           .provider(Provider.AWS)
           .audio(audio)
           .synthesisTime(endSynthesis - startSynthesis)
+          .downloadTime(downloadTime)
           .build();
     } finally {
       serviceRegion = null;

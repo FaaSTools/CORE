@@ -3,6 +3,8 @@ package ocr;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Optional;
+
 import shared.Configuration;
 import shared.Credentials;
 import shared.Provider;
@@ -61,6 +63,7 @@ public class OcrProviderAmazon implements OcrProvider {
 
     String region;
     Document doc;
+    long startDownload = System.currentTimeMillis();
     if (!callByValue) {
       region = storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl());
       S3Object s3Object =
@@ -76,6 +79,7 @@ public class OcrProviderAmazon implements OcrProvider {
       SdkBytes sourceBytes = SdkBytes.fromInputStream(sourceStream);
       doc = Document.builder().bytes(sourceBytes).build();
     }
+    long endDownload = System.currentTimeMillis();
 
     // invoke service
     long startTime = System.currentTimeMillis();
@@ -93,7 +97,11 @@ public class OcrProviderAmazon implements OcrProvider {
     }
     long endTime = System.currentTimeMillis();
     String text = resultBuilder.toString();
-    return OcrResponse.builder().ocrTime(endTime - startTime).text(text).build();
+    return OcrResponse.builder()
+        .ocrTime(endTime - startTime)
+        .downloadTime(Optional.ofNullable(callByValue ? endDownload - startDownload : null))
+        .text(text)
+        .build();
   }
 
   private String selectRegion() {

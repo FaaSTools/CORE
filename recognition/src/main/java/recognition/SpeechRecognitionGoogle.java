@@ -66,11 +66,14 @@ public class SpeechRecognitionGoogle implements SpeechRecognition {
     boolean callByReference = isCallByReferencePossible(inputFileInfo);
     // init audio config
     RecognitionAudio audio;
+    Optional<Long> downloadTime = Optional.empty();
     if (callByReference) {
       audio = createGcsRecognitionAudio(inputFileInfo);
     } else {
+      long startDownload = System.currentTimeMillis();
       byte[] contents = storage.read(inputFile);
       audio = createLocalRecognitionAudio(contents);
+      downloadTime = Optional.of(System.currentTimeMillis() - startDownload);
     }
     // init recognition config
     RecognitionConfig config =
@@ -95,6 +98,7 @@ public class SpeechRecognitionGoogle implements SpeechRecognition {
     SpeechRecognitionResponse response = parseResponse(jsonString);
     response.setProvider(Provider.GCP);
     response.setRecognitionTime(end - start);
+    response.setDownloadTime(downloadTime);
     speechClient.close();
     return response;
   }

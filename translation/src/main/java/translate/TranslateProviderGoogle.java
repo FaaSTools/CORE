@@ -38,8 +38,10 @@ public class TranslateProviderGoogle implements TranslateProvider {
 
   @Override
   public TranslateResponse translate(String inputFile, String language) throws Exception {
+    long startDownload = System.currentTimeMillis();
     // read the input text
     String text = new String(storage.read(inputFile));
+    long downloadTime = System.currentTimeMillis() - startDownload;
     // translate text
     LocationName parent = LocationName.of(credentials.getGoogleProjectId(), "global");
     TranslateTextRequest.Builder requestBuilder =
@@ -61,6 +63,7 @@ public class TranslateProviderGoogle implements TranslateProvider {
     return TranslateResponse.builder()
         .translateTime(endTime - startTime)
         .text(translatedText)
+        .downloadTime(downloadTime)
         .build();
   }
 

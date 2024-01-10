@@ -4,10 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import lombok.Getter;
 import lombok.ToString;
@@ -65,6 +62,7 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
       boolean spokenPunctuation)
       throws Exception {
     try {
+      Optional<Long> downloadTime = Optional.empty();
       // parse input file url
       FileInfo inputFileInfo = FileInfo.parse(inputFile);
       // select region where to run the service
@@ -76,7 +74,9 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
           || !inputFileInfo.getBucketInfo().getProvider().equals(Provider.AWS)
           || !serviceRegion.equals(
               storage.getRegion(inputFileInfo.getBucketInfo().getBucketUrl()))) {
+        long startDownload = System.currentTimeMillis();
         inputFileInfo = uploadInputToTmpS3Bucket(inputFileInfo);
+        downloadTime = Optional.of(System.currentTimeMillis() - startDownload);
       }
       // invoke the service
       String jobName = UUID.randomUUID().toString();
@@ -110,6 +110,7 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
           parseResponse(transcriptJsonString, srtSubtitlesString, vttSubtitlesString);
       response.setProvider(Provider.AWS);
       response.setRecognitionTime(end - start);
+      response.setDownloadTime(downloadTime);
       transcribeClient.close();
       return response;
     } finally {
