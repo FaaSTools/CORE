@@ -66,7 +66,7 @@ public class OcrProviderAmazon implements OcrProvider {
       S3Object s3Object =
           S3Object.builder()
               .bucket(inputFileInfo.getBucketInfo().getBucketName())
-              .name(inputFileInfo.getFileName())
+              .name(inputFileInfo.getPath())
               .build();
       doc = Document.builder().s3Object(s3Object).build();
     } else {

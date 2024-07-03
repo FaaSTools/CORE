@@ -14,8 +14,12 @@ import java.util.regex.Pattern;
 @ToString
 public class BucketInfo {
 
-  public static final String AWS_BUCKET_REGEX = "(http|https)://(.*).s3.(.*.)?amazonaws.com/?";
+  public static final String AWS_BUCKET_REGEX = "(http|https)://(.*).s3.(.*.)?amazonaws.com/?(.*)";
   public static final String GCP_BUCKET_REGEX = "(http|https)://storage.cloud.google.com/(.*?)/(.*)";
+  public static final Pattern AWS_BUCKET_REGEX_PATTERN = Pattern.compile(AWS_BUCKET_REGEX);
+  public static final Pattern GCP_BUCKET_REGEX_PATTERN = Pattern.compile(GCP_BUCKET_REGEX);
+
+  private static final String AWS_DEFAULT_REGION_WITHOUT_NAME_IN_URL = "us-east-1";
 
   private Provider provider; // AWS | GCP
   private String region; // this is null for GCP, as the region is not included in the url
@@ -33,9 +37,9 @@ public class BucketInfo {
 
   /** Get provider from bucket URL. */
   private static Provider getProvider(String bucketUrl) {
-    if (bucketUrl.matches(AWS_BUCKET_REGEX)) {
+    if (AWS_BUCKET_REGEX_PATTERN.matcher(bucketUrl).matches()) {
       return Provider.AWS;
-    } else if (bucketUrl.matches(GCP_BUCKET_REGEX)) {
+    } else if (GCP_BUCKET_REGEX_PATTERN.matcher(bucketUrl).matches()) {
       return Provider.GCP;
     }
     return null;
@@ -43,15 +47,13 @@ public class BucketInfo {
 
   /** Get the location where the storage bucket resides. */
   private static String getBucketRegion(String bucketUrl) {
-    if (bucketUrl.matches(AWS_BUCKET_REGEX)) {
+    if (AWS_BUCKET_REGEX_PATTERN.matcher(bucketUrl).matches()) {
       // region is encoded in the storage url
-      Pattern p = null;
-      p = Pattern.compile(AWS_BUCKET_REGEX);
-      Matcher m = p.matcher(bucketUrl);
+      Matcher m = AWS_BUCKET_REGEX_PATTERN.matcher(bucketUrl);
       if (m.find()) {
         String region = m.group(3);
         if (region == null || region.isEmpty() || region.isBlank()) {
-          return null;
+          return AWS_DEFAULT_REGION_WITHOUT_NAME_IN_URL;
         }
         return region.substring(0, region.length() - 1);
       }
@@ -60,17 +62,14 @@ public class BucketInfo {
   }
 
   /** Get bucket name from bucket URL. */
-  private static String getBucketName(String buketUrl) {
-    Pattern p = null;
-    if (buketUrl.matches(AWS_BUCKET_REGEX)) {
-      p = Pattern.compile(AWS_BUCKET_REGEX);
-      Matcher m = p.matcher(buketUrl);
+  private static String getBucketName(String bucketUrl) {
+    if (AWS_BUCKET_REGEX_PATTERN.matcher(bucketUrl).matches()) {
+      Matcher m = AWS_BUCKET_REGEX_PATTERN.matcher(bucketUrl);
       if (m.find()) {
         return m.group(2);
       }
-    } else if (buketUrl.matches(GCP_BUCKET_REGEX)) {
-      p = Pattern.compile(GCP_BUCKET_REGEX);
-      Matcher m = p.matcher(buketUrl);
+    } else if (GCP_BUCKET_REGEX_PATTERN.matcher(bucketUrl).matches()) {
+      Matcher m = GCP_BUCKET_REGEX_PATTERN.matcher(bucketUrl);
       if (m.find()) {
         return m.group(2);
       }

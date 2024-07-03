@@ -128,7 +128,7 @@ public class SpeechRecognitionAmazon implements SpeechRecognition {
       String languageCode,
       Collection<SubtitleFormat> subtitleFormats) {
     String bucketName = input.getBucketInfo().getBucketName();
-    String fileName = input.getFileName();
+    String fileName = input.getPath();
     String s3Uri = "s3://" + bucketName + "/" + fileName;
     StartTranscriptionJobRequest.Builder builder =
         StartTranscriptionJobRequest.builder()

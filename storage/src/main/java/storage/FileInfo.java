@@ -1,11 +1,10 @@
 package storage;
 
-import lombok.*;
-import org.apache.commons.io.FilenameUtils;
-
 import java.nio.file.FileSystems;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import lombok.*;
+import org.apache.commons.io.FilenameUtils;
 
 @Builder
 @NoArgsConstructor
@@ -19,9 +18,24 @@ public class FileInfo {
   public static final String GCP_FILE_REGEX = "(http|https)://storage.cloud.google.com/(.*?)/(.*)";
 
   private boolean isLocal;
-  private String fileName;
+  @Deprecated private String fileName;
+
   private String fileUrl;
   private BucketInfo bucketInfo;
+  private String path;
+  private String name;
+
+  private static FileInfo parseLocalFileUrl(String fileUrl) {
+    String absolutePath =
+        FileSystems.getDefault().getPath(fileUrl).normalize().toAbsolutePath().toString();
+    return FileInfo.builder()
+        .isLocal(true)
+        .fileUrl(absolutePath)
+        .fileName(FilenameUtils.getName(fileUrl))
+        .name(FilenameUtils.getName(fileUrl))
+        .path(absolutePath)
+        .build();
+  }
 
   public static FileInfo parse(String fileUrl) {
     if (isLocalFile(fileUrl)) {
@@ -31,13 +45,6 @@ public class FileInfo {
     }
   }
 
-  private static FileInfo parseLocalFileUrl(String fileUrl) {
-    String absolutePath =
-        FileSystems.getDefault().getPath(fileUrl).normalize().toAbsolutePath().toString();
-    String fileName = FilenameUtils.getName(fileUrl);
-    return FileInfo.builder().isLocal(true).fileUrl(absolutePath).fileName(fileName).build();
-  }
-
   private static FileInfo parseCloudStorageFileUrl(String fileUrl) {
     String bucketUrl = getBucketUrl(fileUrl);
     BucketInfo bucketInfo = BucketInfo.parse(bucketUrl);
@@ -45,9 +52,28 @@ public class FileInfo {
     return FileInfo.builder()
         .isLocal(false)
         .fileName(fileName)
+        .path(fileName)
+        .name(FilenameUtils.getName(fileName))
         .fileUrl(fileUrl)
         .bucketInfo(bucketInfo)
         .build();
+  }
+
+  /**
+   * Filename is confusing and returns:
+
+   * <p>- for local files the filename (e.g. for "/home/user1/file.txt" -> "file1.txt"),
+   *
+   * <p>- but path for cloud files (e.g. for
+   * "https://storage.cloud.google.com/region/folder1/file1.txt" -> "/folder1/file1.txt")
+   *
+   * <p>Replace with {@link #getName()} and {@link #getPath()} respectively
+   *
+   * @return as described above
+   */
+  @Deprecated
+  public String getFileName() {
+    return fileName;
   }
 
   /** Returns true if the file is not a cloud storage url. */
