@@ -28,7 +28,7 @@ public class Credentials {
   private String googleProjectId;
   private GoogleCredentials gcpClientCredentials;
 
-  private Credentials(String credentialsString) throws IOException {
+  public Credentials(String credentialsString) throws IOException {
     this.awsCredentials = getAwsCredentialsV2(credentialsString);
     this.gcpCredentials = getGoogleServiceCredentials(credentialsString);
     this.googleProjectId = getGoogleProjectId(credentialsString);
