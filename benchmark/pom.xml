@@ -24,6 +24,10 @@
         <module>invoker</module>
     </modules>
 
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
     <build>
         <pluginManagement>
             <plugins>

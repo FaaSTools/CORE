@@ -2,6 +2,19 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/sashkoristov/jFaaS</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <parent>
         <groupId>core</groupId>
         <artifactId>benchmark</artifactId>
@@ -10,15 +23,12 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>invoker</artifactId>
-    <version>1.0</version>
-    
+
     <dependencies>
-        <!-- mvn install:install-file -Dfile=externalJars/jFaaS-all.jar -DgroupId=jFaas -DartifactId=jFaas -Dversion=1.0 -Dpackaging=jar -DgeneratePom=true -->
         <dependency>
-            <groupId>jFaas</groupId>
-            <artifactId>jFaas</artifactId>
-            <version>1.0</version>
-            <type>jar</type>
+            <groupId>jfaas</groupId>
+            <artifactId>jfaas</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>

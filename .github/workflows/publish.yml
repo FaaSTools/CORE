@@ -1,0 +1,28 @@
+name: Publish package to GitHub Packages
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version of the JAR to publish (e.g., 1.0.0, 1.0.1, etc.)'
+        required: true
+        default: '1.0-SNAPSHOT' # Optional, you can set a default version if you want
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set maven version
+        run: mvn versions:set -DnewVersion=${{ github.event.inputs.version }} && mvn versions:update-child-modules
+
+      - name: Publish package
+        run: mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
