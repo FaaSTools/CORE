@@ -53,7 +53,7 @@ public class OcrProviderGoogle implements OcrProvider {
           "gs://"
               + inputFileInfo.getBucketInfo().getBucketName()
               + "/"
-              + inputFileInfo.getFileName();
+              + inputFileInfo.getPath();
       GcsSource gcsSource = GcsSource.newBuilder().setUri(gsutilUrl).build();
       inputConfig =
           InputConfig.newBuilder().setMimeType("application/pdf").setGcsSource(gcsSource).build();

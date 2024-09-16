@@ -105,7 +105,7 @@ public class SpeechRecognitionGoogle implements SpeechRecognition {
 
   private RecognitionAudio createGcsRecognitionAudio(FileInfo file) {
     String bucket = file.getBucketInfo().getBucketName();
-    String key = file.getFileName();
+    String key = file.getPath();
     String gcsUrl = "gs://" + bucket + "/" + key;
     return RecognitionAudio.newBuilder().setUri(gcsUrl).build();
   }
